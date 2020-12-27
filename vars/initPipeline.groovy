@@ -12,7 +12,7 @@ def call(String configPath) {
         println(configPath)
         println("${BRANCH_NAME}")
         println("${GIT_REPO}")
-        Map gitcheckout = new gitCheckout()
+        gitcheckout = new gitCheckout()
         gitcheckout.getCode("${GIT_REPO}","${BRANCH_NAME}")
         configPath = workspace + "/" + configPath
         println(configPath)
