@@ -16,7 +16,7 @@ def call(String configPath) {
         branches: [[name: "*/${BRANCH_NAME}"]],
         doGenerateSubmoduleConfigurations: false,
         userRemoteConfigs: [[credentialsId: 'Github', url: "${GIT_REPO}"]]])
-        echo "ls -al"
+        sh "ls -al"
         configPath = workspace + "/" + configPath
         println(configPath)
 
