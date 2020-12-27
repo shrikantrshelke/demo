@@ -9,6 +9,8 @@ def call(String configPath) {
         workspace = env.WORKSPACE
         println(workspace)
         println(configPath)
+        println("${BRANCH_NAME}")
+        println("${GIT_REPO}")
     }
   }
 }
