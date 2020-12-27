@@ -14,6 +14,8 @@ def call(String configPath) {
 
         configPath = workspace + "/" + configPath
         println(configPath)
+        def pipelineConfig = readYaml (file: configPath) 
+        println(pipelineConfig)
     }
   }
 }
