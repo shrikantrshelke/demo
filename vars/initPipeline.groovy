@@ -12,7 +12,10 @@ def call(String configPath) {
         println(configPath)
         println("${BRANCH_NAME}")
         println("${GIT_REPO}")
-        new gitCheckout().getCode("${GIT_REPO}","${BRANCH_NAME}")
+        checkout([$class: 'GitSCM',
+        branches: [[name: "*/${BRANCH_NAME}"]],
+        doGenerateSubmoduleConfigurations: false,
+        userRemoteConfigs: [[credentialsId: 'Github', url: "${GIT_REPO}"]]])
         configPath = workspace + "/" + configPath
         println(configPath)
 
