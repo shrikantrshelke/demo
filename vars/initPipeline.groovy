@@ -1,4 +1,5 @@
 import java.time.LocalDateTime
+import demo.gitCheckout
 def call(String configPath) {
   
   def workspace
@@ -11,9 +12,11 @@ def call(String configPath) {
         println(configPath)
         println("${BRANCH_NAME}")
         println("${GIT_REPO}")
-
+        gitcheckout = new getCheckout()
+        gitcheckout.getCode("${GIT_REPO}","${BRANCH_NAME}")
         configPath = workspace + "/" + configPath
         println(configPath)
+
         def pipelineConfig = readYaml (file: configPath) 
         println(pipelineConfig)
     }
