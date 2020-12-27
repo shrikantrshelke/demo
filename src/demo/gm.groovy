@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 package demo
-Class sample(){
+class sample{
 
     def getMessge(){
         return "Good Morning" 
