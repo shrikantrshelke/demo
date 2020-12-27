@@ -1,5 +1,5 @@
 import java.time.LocalDateTime
-import demo.gitCheckout
+import demo.*
 def call(String configPath) {
   
   def workspace
@@ -12,7 +12,7 @@ def call(String configPath) {
         println(configPath)
         println("${BRANCH_NAME}")
         println("${GIT_REPO}")
-        gitcheckout = new getCheckout()
+        gitcheckout = new gitCheckout()
         gitcheckout.getCode("${GIT_REPO}","${BRANCH_NAME}")
         configPath = workspace + "/" + configPath
         println(configPath)
