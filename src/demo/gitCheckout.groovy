@@ -1,6 +1,6 @@
 package demo
 
-public class getCheckout{
+public class gitCheckout{
     def getCode(String REPO_NAME, String branch){
         checkout changelog: false, poll: false,
         scm: [$class: 'GitSCM',
