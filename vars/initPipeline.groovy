@@ -11,6 +11,9 @@ def call(String configPath) {
         println(configPath)
         println("${BRANCH_NAME}")
         println("${GIT_REPO}")
+
+        configPath = workspace + "/" + configPath
+        println(configPath)
     }
   }
 }
