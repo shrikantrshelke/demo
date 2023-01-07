@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: main
+name: demo
 
 # Controls when the workflow will run
 on:
@@ -22,8 +22,5 @@ jobs:
       - name: Parsing pipeline.yml
         uses: mikefarah/yq@v4.30.6
         with:
-          cmd: wf_list=$(yq e '.pipeline[].wf' infra/pipeline.yml)
-               for i in $wf_list
-               do
-                   echo $i
-               done 
+          cmd: yq e '.pipeline[].wf' infra/pipeline.yml
+
