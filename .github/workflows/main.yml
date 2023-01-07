@@ -19,10 +19,11 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Parsing pipeline.yml
-        run: |
-          wf_list=$(yq e '.pipeline[].wf' infa/pipeline.yml)
-          #echo $wf_list
-          for i in $wf_list
-          do
-              echo $i
-          done
+        uses: mikefarah/yq@v4.30.6
+        with:
+          cmd: wf_list=$(yq e '.pipeline[].wf' infa/pipeline.yml)
+               #echo $wf_list
+               for i in $wf_list
+               do
+                  echo $i
+               done
