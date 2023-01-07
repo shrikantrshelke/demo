@@ -23,8 +23,5 @@ jobs:
         uses: shrikantrshelke/shared-workflow/.github/workflows/main.yml@main
      
   build:
-      runs-on: ubuntu-latest
       needs: [parse]
-      steps:
-         - name: Build
-           uses: shrikantrshelke/shared-workflow/.github/workflows/build.yml@main
+      uses: shrikantrshelke/shared-workflow/.github/workflows/build.yml@main
