@@ -1,0 +1,11 @@
+pipeline:
+    build:
+      wf: build
+    unit_test:
+      wf: unit_test
+    coverage:
+      wf: sonar_scan
+    deploy:
+      wf: deploy_eks
+    notify:
+      wf: slack
