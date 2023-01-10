@@ -1,11 +1,21 @@
-pipeline:
-    build:
-      wf: build
-    unit_test:
-      wf: unit_test
-    coverage:
-      wf: sonar_scan
-    deploy:
-      wf: deploy_eks
-    notify:
-      wf: slack
+build:
+  #ECR repo name
+  docker_repo: "chatApp"
+  project:
+    #path to the project dir
+    path:
+
+testing:
+  unit:
+    enable: true
+    file:
+      - src/testing/p1/p1.java
+      - src/testing/p2/p2.java
+      - src/testing/p3/p3.java
+
+deployment:
+  namespace: chatapp
+  helm_release_name: chatApp_tb1
+  aws_account:
+    - dev
+    - prod
