@@ -10,9 +10,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   main:
-   runs-on: ubuntu-latest
-   steps:
-     - uses: shrikantrshelke/shared-workflow/.github/workflows/main.yml@main
+     uses: shrikantrshelke/shared-workflow/.github/workflows/main.yml@main
      
   #build:
   #   needs: [parse]
