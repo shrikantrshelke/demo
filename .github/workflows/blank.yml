@@ -10,7 +10,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
    main:
-      - uses: actions/checkout@v3
+       uses: actions/checkout@v3
      
   #build:
   #   needs: [parse]
