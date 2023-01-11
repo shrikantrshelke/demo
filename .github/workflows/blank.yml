@@ -8,14 +8,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        uses: shrikantrshelke/shared-workflow/.github/workflows/build.yml@main
+   main:
+      uses: shrikantrshelke/shared-workflow/.github/workflows/build.yml@main
      
   #build:
   #   needs: [parse]
