@@ -9,8 +9,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  main:
-    uses: shrikantrshelke/shared-workflow/.github/workflows/main.yml@main
+   main:
+      - uses: actions/checkout@v3
      
   #build:
   #   needs: [parse]
